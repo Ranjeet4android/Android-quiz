@@ -29,7 +29,7 @@ public class QuizFunActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-		Button button = (Button)findViewById(R.id.button);
+		/*Button button = (Button)findViewById(R.id.button);
 		Button button2 = (Button)findViewById(R.id.button2);
 		button.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -45,15 +45,15 @@ public class QuizFunActivity extends Activity{
 				Intent intent = new Intent(QuizFunActivity.this, MultiQuizActivity.class);//QuestionActivity
 				startActivity(intent);
 			}
-		});
+		});*/
         Thread thread = new Thread() {
         	public void run() {
 		        try {
 		        	Thread.sleep(3*1000);
 			        finish();
 			        loadQuestions();
-			        //Intent intent = new Intent(QuizFunActivity.this, MultiQuizActivity.class);//QuestionActivity
-			        //QuizFunActivity.this.startActivity(intent);
+			        Intent intent = new Intent(QuizFunActivity.this, MultiQuizActivity.class);//QuestionActivity
+			        QuizFunActivity.this.startActivity(intent);
 	        	} catch (Exception e) {
 	        	} 
         	}
